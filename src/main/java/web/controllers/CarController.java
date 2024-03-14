@@ -6,6 +6,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import web.models.Car;
+import web.services.CarService;
 import web.services.CarServiceImp;
 
 import java.util.List;
@@ -13,7 +14,7 @@ import java.util.Optional;
 
 @Controller
 public class CarController {
-    private final CarServiceImp carServiceImp;
+    private final CarService carServiceImp;
     @Autowired
     public CarController(CarServiceImp carServiceImp) {
         this.carServiceImp = carServiceImp;
